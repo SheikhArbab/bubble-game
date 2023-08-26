@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    border: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+::selection{
+    background-color:rgba(221, 2, 255, 0.323);
+    color: #fff;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#site-wrapper {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        to bottom right,
+        #91defe,
+        #99c0f9,
+        #bdb6ec,
+        #d7b3e3,
+        #efb3d5,
+        #f9bccc
+      );
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    
+    
+    .panel {
+    width: 80%;
+    height: 80%;
+    border-radius: 2%;
+    overflow: hidden;
+    position: absolute;
+background: rgba(255, 255, 255, 0.188);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+border: 1px solid rgba(255, 255, 255, 0.14);
+
+}
+
+
+.ptop{
+background: rgba(221, 2, 255, 0.323);
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+    width: 100%;
+    height: 100px;
+    display:  flex;
+    align-items: center;
+    justify-content: space-between  ;
+    padding:  0 90px;
+}
+.elem{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+.elem > .box{
+ background-color: white;
+ padding: 6px 12px;
+ border-radius: 6px;
+ color: rgba(221, 2, 255, 0.323);
+ font-weight: bold;
+ font-size: 25px;
+}
+.pbottom{
+    width: 100%;
+    height: calc(100% - 100px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+.bubble{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(
+       45deg,
+        #91defe,
+        #99c0f9,
+        #bdb6ec,
+        #d7b3e3,
+        #efb3d5,
+        #f9bccc
+      );
+      box-shadow: inset 0 0 10px 0 rgba(255, 255, 255, 0.816), 0 0 10px 0 rgba(237, 237, 237, 0.816);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    font-weight: bold;
+}
+.bubble:hover{
+    background-image: linear-gradient(
+        45deg,
+         #7bd3f9,
+         #80b3ff,
+         #b8aefb,
+         #da9bee,
+         #e795c4,
+         #fcaac0
+       );    background-image: linear-gradient(
+        -90deg,
+         #91defe,
+         #99c0f9,
+         #bdb6ec,
+         #d7b3e3,
+         #efb3d5,
+         #f9bccc
+       );
+    cursor: pointer;
+}
+
+
+.ball {
+    animation: float 3.5s ease-in-out infinite;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+  
+    background: radial-gradient(
+      circle at 75% 30%,
+      white 5px,
+      aqua 8%,
+      darkblue 60%,
+      aqua 100%
+    );
+    box-shadow: inset 0 0 20px #fff, inset 10px 0 46px #eaf5fc,
+      inset 88px 0px 60px #c2d8fe, inset -20px -60px 100px #fde9ea,
+      inset 0 50px 140px #fde9ea, 0 0 90px #fff;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-80px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+  
+  .shadow {
+    background: #b490b2;
+    width: 150px;
+    height: 40px;
+    top: 70%;
+    animation: expand 4s infinite;
+    position: absolute;
+    border-radius: 50%;
+  }
+  @keyframes expand {
+    0%,
+    100% {
+      transform: scale(0.5);
+    }
+  
+    50% {
+      transform: scale(1);
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .ball {
+      animation: float 4.5s ease-in-out infinite;
+      height: 120px;
+      width: 120px;
+  
+      background: radial-gradient(
+        circle at 65% 35%,
+        white 5px,
+        aqua 15%,
+        darkblue 50%,
+        aqua 100%
+      );
+      box-shadow: inset 0 -20px 30px #fff, inset 40px 0 46px #eaf5fc,
+        inset 58px 0px 60px #c2d8fe, inset -8px -30px 100px #fde9ea,
+        inset 0 20px 110px #fde9ea, 0 0 90px #fff;
+    }
+    .shadow {
+      width: 90px;
+      height: 20px;
+      top: 78%;
+      animation: expand 5s infinite;
+    }
+  
+    @keyframes float {
+      0% {
+        transform: translatey(0px);
+      }
+      50% {
+        transform: translatey(-50px);
+      }
+      100% {
+        transform: translatey(0px);
+      }
+    }
+  }
+  
+
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+
+
+  .ptop {
+
+    padding: 0 15px;
+}
+
+.bubble{
+  width: 30px;
+  height: 30px;
+}
+
+
+.pbottom{
+  gap: 10px;
+}
+
+.elem > .box {
+  padding: 2px 8px;
+  font-size: 16px;
+}
+.elem > h3 {
+  font-size: 16px;
+}
+
+}
